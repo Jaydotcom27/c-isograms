@@ -40,6 +40,14 @@ void TestIsIsogram4(){
     }
 }
 
+void TestIsIsogram5(){
+    char arg[] = "hola";
+    bool result = IsIsogram(arg); 
+    if (result != 1 ){
+        printf("%%TEST_FAILED%% time=0 testname=TestIsIsogram5 (newsimpletest1) message=Is not isogram.\n", arg);
+    }
+}
+
 int main(int argc, char** argv) {
     printf("%%SUITE_STARTING%% newsimpletest1\n");
     printf("%%SUITE_STARTED%%\n");
@@ -59,6 +67,10 @@ int main(int argc, char** argv) {
     printf("%%TEST_STARTED%% TestIsIsogram4 (newsimpletest1)\n");
     TestIsIsogram();
     printf("%%TEST_FINISHED%% time=0 TestIsIsogram4 (newsimpletest1) \n");
+    
+    printf("%%TEST_STARTED%% TestIsIsogram5 (newsimpletest1)\n");
+    TestIsIsogram();
+    printf("%%TEST_FINISHED%% time=0 TestIsIsogram5 (newsimpletest1) \n");
     
     printf("%%SUITE_FINISHED%% time=0\n");
 
