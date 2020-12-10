@@ -7,12 +7,14 @@
 
 bool IsIsogram(char *str){
     char newString[strlen(str)];
-    for(int i = 0; i < strlen(str); i++){
+    
+    for(int i = 0; i < str[i] ; i++){
         newString[i] = tolower(str[i]);
     }
-    for(int j = 0; j < strlen(str); j++ ){
-        for(int k = strlen(str); k > 0; k--){
-            if(newString[j] == str[k] && j != k){
+    
+    for(int i = 0; i < strlen(str); i++){
+        for(int j = strlen(str); j > 0; j-- ){
+            if( newString[i] == str[j] && i != j){
                 return 0;
             }
         }
@@ -20,12 +22,11 @@ bool IsIsogram(char *str){
     return 1;
 }
 
+
+
 int main(int argc, char** argv) {
-    if(IsIsogram("ambidextrously")){
-        printf("es isograma");
-    } else{
-        printf("no es isograma");
-    }
+    
+
     return (EXIT_SUCCESS);
 }
 

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=isograms
+PROJECTNAME=Isograms
 
 # Active Configuration
 DEFAULTCONF=Debug
