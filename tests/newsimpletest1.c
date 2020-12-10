@@ -15,6 +15,15 @@ void TestIsogram(){
     }
 }
 
+void TestIsogram2(){
+    char arg[] = "juegos";
+    bool result = IsIsogram(arg);
+    
+    if (result != 1){
+        printf("%%TEST_FAILED%% time=0 testname=IsIsogram2 (newsimpletest1) message=Is not isogram.\n", arg);
+    }
+}
+
 
 
 int main(int argc, char** argv) {
@@ -23,6 +32,10 @@ int main(int argc, char** argv) {
     
     printf("%%TEST_STARTED%% IsIsogram (newsimpletest1)\n");
     TestIsogram();
+    printf("%%TEST_FINISHED%% time=0 func (newsimpletest1) \n");
+    
+    printf("%%TEST_STARTED%% IsIsogram2 (newsimpletest1)\n");
+    TestIsogram2();
     printf("%%TEST_FINISHED%% time=0 func (newsimpletest1) \n");
     
     printf("%%SUITE_FINISHED%% time=0\n");
