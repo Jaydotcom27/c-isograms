@@ -8,7 +8,7 @@
 bool IsIsogram(char *str){
     char newString[strlen(str)];
     
-    for(int i = 0; i < str[i] ; i++){
+    for(int i = 0; str[i] ; i++){
         newString[i] = tolower(str[i]);
     }
     
@@ -25,7 +25,11 @@ bool IsIsogram(char *str){
 
 
 int main(int argc, char** argv) {
-    
+    if (IsIsogram("AnOrmAl")){
+        printf(" es isograma");
+    } else{
+         printf("no es isograma");
+    }
 
     return (EXIT_SUCCESS);
 }
