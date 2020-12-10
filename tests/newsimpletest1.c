@@ -38,10 +38,18 @@ void TestIsogram4(){
     bool result = IsIsogram(arg);
     
     if (result != 0){
-        printf("%%TEST_FAILED%% time=0 testname=IsIsogram (newsimpletest1) message=The word is an isogram.\n", arg);
+        printf("%%TEST_FAILED%% time=0 testname=IsIsogram4 (newsimpletest1) message=The word is an isogram.\n", arg);
     }
 }
 
+void TestIsogram5(){
+    char arg[] = "Ymerej";
+    bool result = IsIsogram(arg);
+    
+    if (result != 0){
+        printf("%%TEST_FAILED%% time=0 testname=IsIsogram5 (newsimpletest1) message=The word is an isogram.\n", arg);
+    }
+}
 
 int main(int argc, char** argv) {
     printf("%%SUITE_STARTING%% newsimpletest1\n");
@@ -62,6 +70,10 @@ int main(int argc, char** argv) {
     printf("%%TEST_STARTED%% IsIsogram4 (newsimpletest1)\n");
     TestIsogram4();
     printf("%%TEST_FINISHED%% time=0 IsIsogram4 (newsimpletest1) \n");
+    
+    printf("%%TEST_STARTED%% IsIsogram5 (newsimpletest1)\n");
+    TestIsogram5();
+    printf("%%TEST_FINISHED%% time=0 IsIsogram5 (newsimpletest1) \n");
     
     printf("%%SUITE_FINISHED%% time=0\n");
 
