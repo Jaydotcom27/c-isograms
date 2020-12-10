@@ -4,14 +4,25 @@
 #include <stdbool.h>
 #include <string.h>
 
+bool IsIsogram(char *str);
+
+void TestIsogram(){
+    char arg[] = "ambidestro";
+    bool result = IsIsogram(arg);
+    
+    if (result != 1){
+        printf("%%TEST_FAILED%% time=0 testname=IsIsogram (newsimpletest1) message=The word is not an isogram.\n", arg);
+    }
+}
+
 
 int main(int argc, char** argv) {
     printf("%%SUITE_STARTING%% newsimpletest1\n");
     printf("%%SUITE_STARTED%%\n");
     
-    printf("%%TEST_STARTED%% func (newsimpletest1)\n");
-    func();
-    printf("%%TEST_FINISHED%% time=0 func (newsimpletest1) \n");
+    printf("%%TEST_STARTED%% IsIsogram (newsimpletest1)\n");
+    TestIsogram();
+    printf("%%TEST_FINISHED%% time=0 IsIsogram (newsimpletest1) \n");
     
     printf("%%SUITE_FINISHED%% time=0\n");
 
