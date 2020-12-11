@@ -4,31 +4,26 @@
 #include <ctype.h>
 #include <string.h>
 
+
 bool IsIsogram(char *str){
-    char newString[strlen(str)];
-    for(int i = 0; i < str[i]; i++){
-        newString[i] = tolower(str[i]);
+    char NewString[strlen(str)];
+    for(int i = 0; str[i]; i++){
+        NewString[i] = tolower(str[i]);
     }
     for(int i = 0; i < strlen(str); i++){
-        for (int j = strlen(str); j > 0; j-- ){
-            if (newString[i] == str[j] && i != j){
+        for(int j = strlen(str); j > 0; j--){
+            if (NewString[i] == str[j] && j != i){
                 return 0;
             }
         }
     }
-    
     return 1;
 }
 
 
-int main(int argc, char** argv) {
-    
-    if (IsIsogram("AlohAAA")){
-        printf("es isograma");
-    } else {
-        printf("no es isograma");
-    }
 
+
+int main(int argc, char** argv) {
     return (EXIT_SUCCESS);
 }
 
